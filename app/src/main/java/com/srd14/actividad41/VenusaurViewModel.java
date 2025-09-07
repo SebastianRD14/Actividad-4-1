@@ -4,13 +4,15 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+
+
+public class VenusaurViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public VenusaurViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Este es el home fragment");
+        mText.setValue("It's Venusaur");
     }
 
     public LiveData<String> getText() {

@@ -7,7 +7,7 @@
     tools:context="com.srd14.actividad41.VenusaurFragment">
 
     <TextView
-        android:id="@+id/text_email"
+        android:id="@+id/text_charizard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,18 +21,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/image_venusaur"
+        android:id="@+id/image_charizard"
         android:layout_width="240dp"
         android:layout_height="240dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="86dp"
-        android:layout_marginBottom="62dp"
-        android:contentDescription="@string/pokemon_venusaur"
+        android:layout_marginBottom="81dp"
+        android:contentDescription="@string/pokemon_charizard"
         android:scaleType="center"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/text_email"
+        app:layout_constraintBottom_toTopOf="@+id/text_charizard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

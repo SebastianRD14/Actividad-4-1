@@ -7,14 +7,24 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.srd14.actividad41.HomeFragment"
+        android:name="com.srd14.actividad41.PokedexFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.srd14.actividad41.EmailFragment"
-        android:label="@string/menu_email"
+        android:id="@+id/nav_venusaur"
+        android:name="com.srd14.actividad41.VenusaurFragment"
+        android:label="@string/menu_venusaur"
         tools:layout="@layout/fragment_email" />
+    <fragment
+        android:id="@+id/nav_charizard"
+        android:name="com.srd14.actividad41.CharizardFragment"
+        android:label="@string/menu_charizard"
+        tools:layout="@layout/fragment_charizard" />
+    <fragment
+        android:id="@+id/nav_blastoise"
+        android:name="com.srd14.actividad41.BlastoiseFragment"
+        android:label="@string/menu_blastoise"
+        tools:layout="@layout/fragment_blastoise" />
 
 </navigation>

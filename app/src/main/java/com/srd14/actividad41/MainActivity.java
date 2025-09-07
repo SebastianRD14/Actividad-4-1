@@ -14,7 +14,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.gson.GsonBuilder;
 import com.srd14.actividad41.databinding.ActivityMainBinding;
+import com.srd14.actividad41.resources.PokemonAPIService;
+import com.srd14.actividad41.resources.PokemonFetchResults;
+
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://pokeapi.co/api/v2/")
+                .addConverterFactory(GsonConverterFactory.create(
+                        new GsonBuilder().serializeNulls().create()
+                ))
+                .build();
+        PokemonAPIService pokemonApiService = retrofit.create(PokemonAPIService.class);
+        Call<PokemonFetchResults> call = pokemonApiService.getPokemons();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -42,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Drawer y NavigationView
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
 
